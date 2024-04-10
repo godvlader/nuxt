@@ -1,5 +1,3 @@
-# todo
-
 ## Build Setup
 
 ```bash
@@ -67,3 +65,14 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+Light mode
+![image](https://github.com/godvlader/nuxt/assets/79583000/8b1f0564-76ca-4bb3-b20a-99a6e1c4bd56)
+
+Dark mode
+![image](https://github.com/godvlader/nuxt/assets/79583000/63ccccd8-9805-47e8-93fc-73c9c18bceeb)
+
+Task done
+![image](https://github.com/godvlader/nuxt/assets/79583000/3da14ecf-d388-45aa-ba35-807d247dd044)
+
+
