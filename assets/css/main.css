@@ -1,0 +1,168 @@
+:root {
+  /* Light theme variables (default) */
+  --task-bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg-color: #f0f0f0;
+  --button-text-color: #000000;
+  --done-text-color: #999;
+  --done-bg-color: #e7f6e7;
+  --delete-bg-color: #ff6b6b;
+  --delete-hover-bg-color: #ff5252;
+  --background-color: #fff; /* Default light theme */
+  --text-color: #000;
+  --main-bg-color: #f4f4f5; /* Light theme main background */
+  --text-color: #000; /* Light theme text */
+  --button-bg-color: #4db6ac; /* Light theme button background */
+  --button-text-color: #fff; /* Light theme button text */
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables */
+  --task-bg-color: #333333;
+  --text-color: #ffffff;
+  --button-bg-color: #555555;
+  --button-text-color: #ffffff;
+  --done-text-color: #cccccc;
+  --done-bg-color: #444444;
+  --delete-bg-color: #ff4747;
+  --delete-hover-bg-color: #ff2e2e;
+  --background-color: #121212; /* Dark theme */
+  --text-color: #fff;
+  --main-bg-color: #333; /* Dark theme main background */
+  --text-color: #fff; /* Dark theme text */
+  --button-bg-color: #555; /* Dark theme button background */
+  --button-text-color: #fff; /* Dark theme button text */
+  /* Add other dark theme variables */
+}
+
+.text {
+  color: var(--text-color);
+}
+
+.background {
+  background-color: var(--background-color);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+main {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(
+    --main-bg-color
+  ); /* Use theme variable for background */
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  color: var(--text-color); /* Ensure text color adapts to theme */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+}
+
+/* Ensuring the input field adapts to theme changes */
+.create-new input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid var(--input-border-color); /* Adapt border color to theme */
+  background-color: var(
+    --task-bg-color
+  ); /* Use task background color for consistency */
+  color: var(--text-color); /* Input text color adapts to theme */
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the Add button to adapt to theme changes */
+.create-new button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: var(
+    --button-bg-color
+  ); /* Button background adapts to theme */
+  color: var(--button-text-color); /* Button text color adapts to theme */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+}
+
+.create-new button:hover {
+  background-color: var(
+    --button-hover-bg-color
+  ); /* Optional: add a hover background color variable if needed */
+  /* If using a hover color variable, define it in both :root and [data-theme="dark"] */
+}
+
+h1 {
+  color: var(
+    --text-color
+  ); /* This ensures it uses the text color defined for each theme */
+  text-align: center;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease; /* Smoothly transition the color change */
+}
+
+p {
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.create-new {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.create-new input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.create-new button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.create-new button:hover {
+  background-color: #009688;
+}
+
+.tasks {
+  margin-top: 20px;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 24px;
+  user-select: none;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.theme-toggle:hover {
+  background-color: var(--button-bg-color);
+}
